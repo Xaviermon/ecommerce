@@ -3,10 +3,7 @@ import { Request, Response } from "express";
 import { handlerHttp } from "../utils/errors";
 import { CategoryInput } from "../db/models/category";
 
-export const getCategory = async (
-  _req: Request,
-  res: Response
-): Promise<Response> => {
+export const getCategory = async (_req: Request, res: Response): Promise<Response> => {
   try {
     const findAllCategory = await db.Category.findAll();
 
@@ -20,10 +17,7 @@ export const getCategory = async (
   }
 };
 
-export const createCategory = async (
-  req: Request,
-  res: Response
-): Promise<Response> => {
+export const createCategory = async (req: Request, res: Response): Promise<Response> => {
   try {
     const { name, description }: CategoryInput = req.body;
 

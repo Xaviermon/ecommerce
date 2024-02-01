@@ -6,10 +6,7 @@ import { generateToken } from "../utils/jwt";
 import { UserLogin } from "../types/User.type";
 import { UserInput } from "../db/models/user";
 
-export const getUser = async (
-  _req: Request,
-  res: Response
-): Promise<Response> => {
+export const getUser = async (_req: Request, res: Response): Promise<Response> => {
   try {
     const users = await db.User.findAll();
 
@@ -22,10 +19,7 @@ export const getUser = async (
     return handlerHttp(res, error);
   }
 };
-export const createUser = async (
-  req: Request,
-  res: Response
-): Promise<Response> => {
+export const createUser = async (req: Request, res: Response): Promise<Response> => {
   try {
     const { name, lastName, email, password }: UserInput = req.body;
 
@@ -60,10 +54,7 @@ export const createUser = async (
   }
 };
 
-export const loginUser = async (
-  req: Request,
-  res: Response
-): Promise<Response> => {
+export const loginUser = async (req: Request, res: Response): Promise<Response> => {
   try {
     const { email, password }: UserLogin = req.body;
 
@@ -103,10 +94,7 @@ export const loginUser = async (
   }
 };
 
-export const userPut = async (
-  req: Request,
-  res: Response
-): Promise<Response> => {
+export const userPut = async (req: Request, res: Response): Promise<Response> => {
   try {
     const { id, name, lastName, email, password }: UserInput = req.body;
 
@@ -132,10 +120,7 @@ export const userPut = async (
   }
 };
 
-export const disableUser = async (
-  req: Request,
-  res: Response
-): Promise<Response> => {
+export const disableUser = async (req: Request, res: Response): Promise<Response> => {
   try {
     const userId: string = req.body.id;
 

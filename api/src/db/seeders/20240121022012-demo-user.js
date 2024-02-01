@@ -9,7 +9,6 @@ module.exports = {
         lastName: "Doe",
         email: "example@example.com",
         password: "contraseña1",
-        state: "habilitado",
         createdAt: new Date(),
         updatedAt: new Date(),
       },
@@ -18,7 +17,6 @@ module.exports = {
         lastName: 'Doe',
         email: 'jane@example.com',
         password: 'contraseña2',
-        state: 'habilitado',
         createdAt: new Date(),
         updatedAt: new Date()
       },
@@ -27,7 +25,6 @@ module.exports = {
         lastName: 'Montero',
         email: 'xavier@example.com',
         password: 'contraseña3',
-        state: 'habilitado',
         createdAt: new Date(),
         updatedAt: new Date()
       },
