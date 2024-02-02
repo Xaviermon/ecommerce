@@ -8,6 +8,8 @@ interface ProductAttributes {
   stock?: number;
   createdAt?: Date;
   updatedAt?: Date;
+  CategoryId?: number;
+  image?: string
 }
 
 export interface ProductInput extends Optional<ProductAttributes, "id"> {}

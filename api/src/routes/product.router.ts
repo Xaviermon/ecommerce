@@ -1,9 +1,8 @@
 import { Router } from "express";
+import { getProducts } from "../controllers/products.controller";
 
 const productRouter = Router();
 
-productRouter.get("/product", (req, res) => {
-  console.log("ruta product");
-});
+productRouter.get("/product", getProducts);
 
 export default productRouter;

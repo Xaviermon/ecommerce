@@ -38,7 +38,7 @@ export const createCategory = async (req: Request, res: Response): Promise<Respo
 
     return res.status(200).send({
       status: 200,
-      message: "User was created correctly",
+      message: "Category was created correctly",
       category: newCategory,
     });
   } catch (error: any) {
@@ -61,9 +61,34 @@ export const updateCategory = async(req: Request, res:Response): Promise<Respons
 
     return res.status(200).send({
       status: 200,
-      message: "User was update correctly",
+      message: "Category was update correctly",
       category: updateCategory,
     });
+  } catch (error: any) {
+    return handlerHttp(res, error)
+  }
+}
+
+export const deleteCategory = async(req: Request, res: Response): Promise<Response> => {
+  try {
+    const { id } = req.body
+
+    const deleteCategory = await db.Category.destroy({
+      where: { id }
+    })
+
+    if (deleteCategory !== 1) {
+      return res.status(400).send({
+        status: 400,
+        message: "Category already exists"
+      })
+    }
+
+    return res.status(200).send({
+      status: 200,
+      message: "Category was delete correctly"
+    })
+    
   } catch (error: any) {
     return handlerHttp(res, error)
   }
