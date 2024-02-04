@@ -4,6 +4,8 @@ interface OrderProductAttributes {
   amount: string;
   createdAt?: Date;
   updatedAt?: Date;
+  OrderId?: number;
+  ProductId?: number
 }
 
 export interface OrderProductInput

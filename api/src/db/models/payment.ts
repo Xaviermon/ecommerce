@@ -7,6 +7,7 @@ interface PaymentAttributes {
   transationId?: string;
   createAt?: Date;
   updatedAt?: Date;
+  OrderId?: number
 }
 
 export interface PaymentInput extends Optional<PaymentAttributes, "id"> {}

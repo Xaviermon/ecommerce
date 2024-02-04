@@ -7,6 +7,7 @@ interface OrderAttributes {
   state?: string;
   createdAt?: Date;
   updatedAt?: Date;
+  UserId?: number;
 }
 
 export interface OrderInput extends Optional<OrderAttributes, "id"> {}

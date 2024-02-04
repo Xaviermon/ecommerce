@@ -6,6 +6,8 @@ interface PaymentMethodAttributes {
 
   createAt?: Date;
   updatedAt?: Date;
+
+  PaymentId?:number;
 }
 
 export interface PaymentMethodInput

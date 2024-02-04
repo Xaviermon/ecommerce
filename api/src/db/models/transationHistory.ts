@@ -6,6 +6,7 @@ interface TransationHistoryAttributes {
   timestap?: string;
   createAt?: Date;
   updatedAt?: Date;
+  UserId?: number;
 }
 
 export interface TransationHistoryInput
