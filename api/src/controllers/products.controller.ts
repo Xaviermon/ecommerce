@@ -43,6 +43,7 @@ export const getProducts = async (req: Request, res: Response): Promise<Response
       status: 200,
       message: "ok",
       product: findAllProducts,
+      offset
     });
   } catch (error: any) {
     return handlerHttp(res, error);
